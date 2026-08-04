@@ -1,0 +1,21 @@
+[package]
+name = "pomodoro-timer-tui"
+version = "0.1.0"
+edition = "2021"
+authors = ["fantasywastaken"]
+description = "A terminal user interface Pomodoro timer with session logging, desktop notifications and productivity statistics"
+license = "MIT"
+
+[[bin]]
+name = "pomodoro"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1"
+crossterm = "0.28"
+ratatui = "0.28"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", features = ["serde"] }
+notify-rust = "4"
